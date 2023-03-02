@@ -1,14 +1,15 @@
 from django.contrib import admin
 
 # NOTE: Tenemos que importar los modelos con los que vamos a trabajar:
-# from e_commerce.models import *
+from e_commerce.models import *
 
 # Register your models here.
 
 # NOTE: Aquí personalizamos los campos en el Django Admin.
 
-# @admin.register(Comic)
-# class ComicsAdmin(admin.ModelAdmin):
+@admin.register(Comic)
+
+class ComicsAdmin(admin.ModelAdmin):
     # NOTE: Para seleccionar los campos en la tabla de registros
     # list_display = ('marvel_id', 'title', 'stock_qty', 'price')
 
@@ -31,4 +32,9 @@ from django.contrib import admin
     #         'fields': ('description','price', 'picture'),
     #     }),
     # )
-    # pass
+    pass
+
+@admin.register(WishList)
+
+class WishList(admin.ModelAdmin):
+    pass
